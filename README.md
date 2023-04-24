@@ -1,4 +1,4 @@
-![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green) [iOS]: https://apple.com ![dependencies](https://img.shields.io/badge/Dependencies-Alamofire%20Kingfisher%20YoutubePlayerView-red)   
+[![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green)](https://apple.com) ![dependencies](https://img.shields.io/badge/Dependencies-Alamofire%20Kingfisher%20YoutubePlayerView-red)   
 
 # Bingeer
 
