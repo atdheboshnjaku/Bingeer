@@ -29,5 +29,5 @@ This app retrieves all tv show, movie and people/actor information from [TMDb](h
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/atdheboshnjaku/Bingeer/blob/main/LICENSE.txt)
 
