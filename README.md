@@ -1,4 +1,4 @@
-[![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green)](https://apple.com) ![dependencies](https://img.shields.io/badge/Dependencies-Alamofire%20Kingfisher%20YoutubePlayerView-red)   
+[![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green)](https://apple.com) [![dependencies](https://img.shields.io/badge/Dependencies-Alamofire-red)](https://cocoapods.org/pods/Alamofire) [![dependencies](https://img.shields.io/badge/Dependencies-Kingfisher-red)](https://cocoapods.org/pods/Kingfisher) [![dependencies](https://img.shields.io/badge/Dependencies-YoutubePlayerView-red)](https://cocoapods.org/pods/YoutubePlayerView)  
 
 # Bingeer
 
