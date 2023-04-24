@@ -73,6 +73,9 @@
 		AD8AFC1F29F679740078964A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADF4088B29F67B6300F8BF1A /* People */,
+				ADF4088A29F67B5C00F8BF1A /* Show */,
+				ADF4088929F67B5500F8BF1A /* Movie */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +95,27 @@
 				AD8AFC0C29F678BC0078964A /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADF4088929F67B5500F8BF1A /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		ADF4088A29F67B5C00F8BF1A /* Show */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		ADF4088B29F67B6300F8BF1A /* People */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
