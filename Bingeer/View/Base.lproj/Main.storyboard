@@ -28,13 +28,15 @@
         <!--Tab Bar Controller-->
         <scene sceneID="edb-sZ-fHl">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="28a-kt-o6y" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="28a-kt-o6y" customClass="TabBarController" customModule="Bingeer" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nya-zy-hBe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBarView" destination="nya-zy-hBe" id="vcQ-bn-QHg"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Tyo-An-BXd"/>
                     </connections>
                 </tabBarController>

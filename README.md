@@ -18,6 +18,10 @@ This app currently uses these dependencies:
 
 This app retrieves all tv show, movie and people/actor information from [TMDb](https://www.themoviedb.org/). 
 
+## Usage
+
+You may download this app and use it for your own projects, HOWEVER please note that you will need to create and obtain an API key from [TMDb](https://www.themoviedb.org/). In doing so you should also read and accept there terms of use.
+
 ## Objectives
 
 - [ ] Pull data from TMDb for Tv Shows
@@ -30,4 +34,3 @@ This app retrieves all tv show, movie and people/actor information from [TMDb](h
 ## License
 
 [MIT](https://github.com/atdheboshnjaku/Bingeer/blob/main/LICENSE.txt)
-

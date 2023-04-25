@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CA6FE884ABE11FAB1F286C8 /* Pods_Bingeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */; };
+		AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F959129F6B87D00BC9E15 /* TabBarController.swift */; };
+		AD24BF1829F7DB4500868EE6 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1729F7DB4500868EE6 /* TVShow.swift */; };
 		AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0829F678BC0078964A /* AppDelegate.swift */; };
 		AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */; };
 		AD8AFC0D29F678BC0078964A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0C29F678BC0078964A /* ViewController.swift */; };
@@ -17,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bingeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingeer.release.xcconfig"; path = "Target Support Files/Pods-Bingeer/Pods-Bingeer.release.xcconfig"; sourceTree = "<group>"; };
+		AD0F959129F6B87D00BC9E15 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AD24BF1729F7DB4500868EE6 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		AD8AFC0529F678BC0078964A /* Bingeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8AFC0829F678BC0078964A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		AD8AFC1429F678BD0078964A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD8AFC1729F678BD0078964A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD8AFC1929F678BD0078964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A5510F6103A607687488D5 /* Pods-Bingeer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingeer.debug.xcconfig"; path = "Target Support Files/Pods-Bingeer/Pods-Bingeer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA6FE884ABE11FAB1F286C8 /* Pods_Bingeer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35DA8C0BCAE14D9E2A1F2693 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E02F717D14092B7788B850A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9A5510F6103A607687488D5 /* Pods-Bingeer.debug.xcconfig */,
+				75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AD8AFBFC29F678BC0078964A = {
 			isa = PBXGroup;
 			children = (
 				AD8AFC0729F678BC0078964A /* Bingeer */,
 				AD8AFC0629F678BC0078964A /* Products */,
+				6E02F717D14092B7788B850A /* Pods */,
+				35DA8C0BCAE14D9E2A1F2693 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8AFC0C29F678BC0078964A /* ViewController.swift */,
+				AD0F959129F6B87D00BC9E15 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +137,7 @@
 		ADF4088A29F67B5C00F8BF1A /* Show */ = {
 			isa = PBXGroup;
 			children = (
+				AD24BF1729F7DB4500868EE6 /* TVShow.swift */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -125,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD8AFC1C29F678BD0078964A /* Build configuration list for PBXNativeTarget "Bingeer" */;
 			buildPhases = (
+				00463DDEB9E285F30516A201 /* [CP] Check Pods Manifest.lock */,
 				AD8AFC0129F678BC0078964A /* Sources */,
 				AD8AFC0229F678BC0078964A /* Frameworks */,
 				AD8AFC0329F678BC0078964A /* Resources */,
+				E8A48DCFFE54CB5F76E30932 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +217,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00463DDEB9E285F30516A201 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bingeer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A48DCFFE54CB5F76E30932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bingeer/Pods-Bingeer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bingeer/Pods-Bingeer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bingeer/Pods-Bingeer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD8AFC0129F678BC0078964A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,7 +266,9 @@
 			files = (
 				AD8AFC1329F678BC0078964A /* Bingeer.xcdatamodeld in Sources */,
 				AD8AFC0D29F678BC0078964A /* ViewController.swift in Sources */,
+				AD24BF1829F7DB4500868EE6 /* TVShow.swift in Sources */,
 				AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */,
+				AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */,
 				AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +411,7 @@
 		};
 		AD8AFC1D29F678BD0078964A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A5510F6103A607687488D5 /* Pods-Bingeer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -363,6 +441,7 @@
 		};
 		AD8AFC1E29F678BD0078964A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
