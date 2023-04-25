@@ -10,6 +10,8 @@
 		7CA6FE884ABE11FAB1F286C8 /* Pods_Bingeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */; };
 		AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F959129F6B87D00BC9E15 /* TabBarController.swift */; };
 		AD24BF1829F7DB4500868EE6 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1729F7DB4500868EE6 /* TVShow.swift */; };
+		AD24BF1C29F7EF0800868EE6 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1B29F7EF0800868EE6 /* Env.swift */; };
+		AD24BF1D29F7EF9A00868EE6 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = AD24BF1929F7ECD600868EE6 /* .env */; };
 		AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0829F678BC0078964A /* AppDelegate.swift */; };
 		AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */; };
 		AD8AFC0D29F678BC0078964A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0C29F678BC0078964A /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingeer.release.xcconfig"; path = "Target Support Files/Pods-Bingeer/Pods-Bingeer.release.xcconfig"; sourceTree = "<group>"; };
 		AD0F959129F6B87D00BC9E15 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AD24BF1729F7DB4500868EE6 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		AD24BF1929F7ECD600868EE6 /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		AD24BF1B29F7EF0800868EE6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		AD8AFC0529F678BC0078964A /* Bingeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8AFC0829F678BC0078964A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,13 +66,13 @@
 				E9A5510F6103A607687488D5 /* Pods-Bingeer.debug.xcconfig */,
 				75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		AD8AFBFC29F678BC0078964A = {
 			isa = PBXGroup;
 			children = (
+				AD24BF1929F7ECD600868EE6 /* .env */,
 				AD8AFC0729F678BC0078964A /* Bingeer */,
 				AD8AFC0629F678BC0078964A /* Products */,
 				6E02F717D14092B7788B850A /* Pods */,
@@ -95,6 +99,7 @@
 				AD8AFC1429F678BD0078964A /* Assets.xcassets */,
 				AD8AFC1929F678BD0078964A /* Info.plist */,
 				AD8AFC1129F678BC0078964A /* Bingeer.xcdatamodeld */,
+				AD24BF1B29F7EF0800868EE6 /* Env.swift */,
 			);
 			path = Bingeer;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD24BF1D29F7EF9A00868EE6 /* .env in Resources */,
 				AD8AFC1829F678BD0078964A /* LaunchScreen.storyboard in Resources */,
 				AD8AFC1529F678BD0078964A /* Assets.xcassets in Resources */,
 				AD8AFC1029F678BC0078964A /* Main.storyboard in Resources */,
@@ -270,6 +276,7 @@
 				AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */,
 				AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */,
 				AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */,
+				AD24BF1C29F7EF0800868EE6 /* Env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
