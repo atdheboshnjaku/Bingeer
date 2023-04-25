@@ -1,3 +1,5 @@
+![BingeerLogo](https://raw.githubusercontent.com/atdheboshnjaku/Bingeer/a0c8e23f1360262c18870a88d5eb43a0de7880b5/Bingeer.svg)
+
 [![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green)](https://apple.com) [![dependencies](https://img.shields.io/badge/Dependencies-Alamofire-red)](https://cocoapods.org/pods/Alamofire) [![dependencies](https://img.shields.io/badge/Dependencies-Kingfisher-red)](https://cocoapods.org/pods/Kingfisher) [![dependencies](https://img.shields.io/badge/Dependencies-YoutubePlayerView-red)](https://cocoapods.org/pods/YoutubePlayerView)  
 
 # Bingeer
