@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		7CA6FE884ABE11FAB1F286C8 /* Pods_Bingeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */; };
 		AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F959129F6B87D00BC9E15 /* TabBarController.swift */; };
-		AD24BF1829F7DB4500868EE6 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1729F7DB4500868EE6 /* TVShow.swift */; };
 		AD24BF1C29F7EF0800868EE6 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1B29F7EF0800868EE6 /* Env.swift */; };
 		AD24BF1D29F7EF9A00868EE6 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = AD24BF1929F7ECD600868EE6 /* .env */; };
+		AD24BF1F29F7F3CC00868EE6 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF1E29F7F3CC00868EE6 /* Show.swift */; };
+		AD24BF2129F7FB4A00868EE6 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF2029F7FB4A00868EE6 /* Api.swift */; };
+		AD24BF2329F8500000868EE6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF2229F8500000868EE6 /* Movie.swift */; };
+		AD24BF2629F903B100868EE6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24BF2529F903B100868EE6 /* DataManager.swift */; };
 		AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0829F678BC0078964A /* AppDelegate.swift */; };
 		AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */; };
 		AD8AFC0D29F678BC0078964A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AFC0C29F678BC0078964A /* ViewController.swift */; };
@@ -25,9 +28,12 @@
 		03682060BC13F7FE0F404149 /* Pods_Bingeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bingeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75449D32E394994F069B2DAA /* Pods-Bingeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingeer.release.xcconfig"; path = "Target Support Files/Pods-Bingeer/Pods-Bingeer.release.xcconfig"; sourceTree = "<group>"; };
 		AD0F959129F6B87D00BC9E15 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		AD24BF1729F7DB4500868EE6 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		AD24BF1929F7ECD600868EE6 /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		AD24BF1B29F7EF0800868EE6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		AD24BF1E29F7F3CC00868EE6 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		AD24BF2029F7FB4A00868EE6 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		AD24BF2229F8500000868EE6 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		AD24BF2529F903B100868EE6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD8AFC0529F678BC0078964A /* Bingeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8AFC0829F678BC0078964A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8AFC0A29F678BC0078964A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AD24BF2429F9039500868EE6 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AD24BF2029F7FB4A00868EE6 /* Api.swift */,
+				AD24BF2529F903B100868EE6 /* DataManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		AD8AFBFC29F678BC0078964A = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +122,10 @@
 		AD8AFC1F29F679740078964A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADF4088B29F67B6300F8BF1A /* People */,
+				AD24BF2429F9039500868EE6 /* NetworkLayer */,
 				ADF4088A29F67B5C00F8BF1A /* Show */,
 				ADF4088929F67B5500F8BF1A /* Movie */,
+				ADF4088B29F67B6300F8BF1A /* People */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 		ADF4088929F67B5500F8BF1A /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				AD24BF2229F8500000868EE6 /* Movie.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -142,7 +159,7 @@
 		ADF4088A29F67B5C00F8BF1A /* Show */ = {
 			isa = PBXGroup;
 			children = (
-				AD24BF1729F7DB4500868EE6 /* TVShow.swift */,
+				AD24BF1E29F7F3CC00868EE6 /* Show.swift */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -270,12 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD24BF2129F7FB4A00868EE6 /* Api.swift in Sources */,
 				AD8AFC1329F678BC0078964A /* Bingeer.xcdatamodeld in Sources */,
 				AD8AFC0D29F678BC0078964A /* ViewController.swift in Sources */,
-				AD24BF1829F7DB4500868EE6 /* TVShow.swift in Sources */,
+				AD24BF2329F8500000868EE6 /* Movie.swift in Sources */,
 				AD8AFC0929F678BC0078964A /* AppDelegate.swift in Sources */,
 				AD0F959229F6B87D00BC9E15 /* TabBarController.swift in Sources */,
 				AD8AFC0B29F678BC0078964A /* SceneDelegate.swift in Sources */,
+				AD24BF2629F903B100868EE6 /* DataManager.swift in Sources */,
+				AD24BF1F29F7F3CC00868EE6 /* Show.swift in Sources */,
 				AD24BF1C29F7EF0800868EE6 /* Env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,8 +16,11 @@ class TabBarController: UITabBarController {
 
         // Do any additional setup after loading the view.
         tabBarView.layer.cornerRadius = 50
-        tabBarView.backgroundColor = .red
-        tabBarView.tintColor = .black
+        tabBarView.backgroundColor = .black
+        tabBarView.tintColor = .yellow
+        
+        
+       
     }
     
 

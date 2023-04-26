@@ -8,12 +8,16 @@
 import Foundation
 
 final class Env {
+    
     static let shared = Env()
     private var env: [String: String] = [:]
     
     private init() {
+        
         guard let url = Bundle.main.url(forResource: ".env", withExtension: nil) else {
+            
             fatalError("Failed to locate .env file in the app bundle.")
+            
         }
         
         do {
@@ -21,6 +25,7 @@ final class Env {
             let lines = data.components(separatedBy: .newlines)
             
             for line in lines {
+                
                 let trimmedLine = line.trimmingCharacters(in: .whitespacesAndNewlines)
                 
                 if !trimmedLine.isEmpty && !trimmedLine.starts(with: "#") {
@@ -31,7 +36,9 @@ final class Env {
                         let value = components[1].trimmingCharacters(in: .whitespacesAndNewlines)
                         env[key] = value
                     }
+                    
                 }
+                
             }
         } catch {
             fatalError("Failed to read .env file: \(error.localizedDescription)")
@@ -41,4 +48,5 @@ final class Env {
     func value(for key: String) -> String? {
         return env[key]
     }
+    
 }
