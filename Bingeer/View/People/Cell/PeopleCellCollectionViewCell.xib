@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PeopleCell" id="gTV-IL-0wX" customClass="PeopleCellCollectionViewCell" customModule="Bingeer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Igk-ZX-yfu">
+                        <rect key="frame" x="10" y="10" width="130" height="170"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="J7W-t0-Lg9"/>
+                            <constraint firstAttribute="width" constant="130" id="TXi-aQ-6uq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CM-GI-88u">
+                        <rect key="frame" x="10" y="185" width="130" height="23"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" name="Titles"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="cellBackground"/>
+            <constraints>
+                <constraint firstItem="2CM-GI-88u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="4my-sP-Z14"/>
+                <constraint firstAttribute="trailing" secondItem="Igk-ZX-yfu" secondAttribute="trailing" constant="10" id="NQO-yH-uGl"/>
+                <constraint firstItem="Igk-ZX-yfu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ckx-lf-XSX"/>
+                <constraint firstItem="Igk-ZX-yfu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="jvv-zX-LwZ"/>
+                <constraint firstItem="2CM-GI-88u" firstAttribute="top" secondItem="Igk-ZX-yfu" secondAttribute="bottom" constant="5" id="t1V-Ml-jbe"/>
+                <constraint firstAttribute="trailing" secondItem="2CM-GI-88u" secondAttribute="trailing" constant="10" id="tAY-jb-pAi"/>
+            </constraints>
+            <size key="customSize" width="150" height="208"/>
+            <connections>
+                <outlet property="personImageView" destination="Igk-ZX-yfu" id="bYw-6a-MfK"/>
+                <outlet property="personNameLabel" destination="2CM-GI-88u" id="ndc-ZB-8Yg"/>
+            </connections>
+            <point key="canvasLocation" x="215.26717557251908" y="76.056338028169023"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Titles">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellBackground">
+            <color red="0.96862745098039216" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

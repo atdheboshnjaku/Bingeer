@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="gTV-IL-0wX" customClass="MovieCell" customModule="Bingeer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="213"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="213"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OBJ-h1-MlE">
+                        <rect key="frame" x="15" y="15" width="120" height="185"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="185" id="hT2-5P-Tl9"/>
+                            <constraint firstAttribute="width" constant="120" id="waE-dK-e2n"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja3-eU-dm3">
+                        <rect key="frame" x="145" y="15.000000000000002" width="173" height="23.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GY-HE-bYH">
+                        <rect key="frame" x="145" y="173" width="88" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="7eE-lo-wAZ"/>
+                            <constraint firstAttribute="height" constant="30" id="b9p-1a-wAa"/>
+                        </constraints>
+                        <color key="tintColor" name="brandPurple"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="chart.bar.xaxis" catalog="system"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cme-FN-bbX">
+                        <rect key="frame" x="278" y="173" width="35" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OuH-3I-RGg"/>
+                            <constraint firstAttribute="width" constant="35" id="xP0-Pf-56m"/>
+                        </constraints>
+                        <color key="tintColor" name="brandPurple"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylH-sk-kjJ">
+                        <rect key="frame" x="145" y="70.666666666666671" width="173" height="19.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                        <color key="textColor" name="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-J3-IaL">
+                        <rect key="frame" x="145" y="43.666666666666664" width="173" height="17"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="cellBackground"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AWX-J3-IaL" secondAttribute="trailing" constant="10" id="0E7-lj-Eko"/>
+                <constraint firstAttribute="trailing" secondItem="cme-FN-bbX" secondAttribute="trailing" constant="15" id="1yK-42-iH1"/>
+                <constraint firstAttribute="bottom" secondItem="3GY-HE-bYH" secondAttribute="bottom" constant="10" id="7jI-Fn-PWt"/>
+                <constraint firstItem="OBJ-h1-MlE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="ATg-eF-TK2"/>
+                <constraint firstItem="AWX-J3-IaL" firstAttribute="leading" secondItem="OBJ-h1-MlE" secondAttribute="trailing" constant="10" id="Aj6-Sr-14h"/>
+                <constraint firstItem="ylH-sk-kjJ" firstAttribute="top" secondItem="AWX-J3-IaL" secondAttribute="bottom" constant="10" id="Bta-MO-kMt"/>
+                <constraint firstItem="ja3-eU-dm3" firstAttribute="leading" secondItem="OBJ-h1-MlE" secondAttribute="trailing" constant="10" id="Fzf-b1-VeC"/>
+                <constraint firstItem="ja3-eU-dm3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="HvQ-eN-57t"/>
+                <constraint firstAttribute="trailing" secondItem="ylH-sk-kjJ" secondAttribute="trailing" constant="10" id="Ogb-kT-Q2k"/>
+                <constraint firstAttribute="trailing" secondItem="ja3-eU-dm3" secondAttribute="trailing" constant="10" id="QTZ-eg-qNT"/>
+                <constraint firstAttribute="bottom" secondItem="cme-FN-bbX" secondAttribute="bottom" constant="10" id="TgK-4g-NJ6"/>
+                <constraint firstItem="ylH-sk-kjJ" firstAttribute="leading" secondItem="OBJ-h1-MlE" secondAttribute="trailing" constant="10" id="Tvs-Qf-nRf"/>
+                <constraint firstItem="OBJ-h1-MlE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Y85-ir-Fz3"/>
+                <constraint firstItem="AWX-J3-IaL" firstAttribute="top" secondItem="ja3-eU-dm3" secondAttribute="bottom" constant="5" id="ojB-0k-vwC"/>
+                <constraint firstItem="3GY-HE-bYH" firstAttribute="leading" secondItem="OBJ-h1-MlE" secondAttribute="trailing" constant="10" id="th5-V4-ZXT"/>
+            </constraints>
+            <size key="customSize" width="328" height="213"/>
+            <connections>
+                <outlet property="addToBingeerListButton" destination="cme-FN-bbX" id="UZj-oS-ysC"/>
+                <outlet property="averageVoteButton" destination="3GY-HE-bYH" id="pvi-Qc-R5Z"/>
+                <outlet property="coverImageView" destination="OBJ-h1-MlE" id="2pw-qF-NTv"/>
+                <outlet property="movieOverview" destination="ylH-sk-kjJ" id="DAF-xc-BW9"/>
+                <outlet property="nameLabel" destination="ja3-eU-dm3" id="mxw-KU-auw"/>
+                <outlet property="releaseDateLabel" destination="AWX-J3-IaL" id="mMv-7W-Fxz"/>
+            </connections>
+            <point key="canvasLocation" x="219.84732824427479" y="77.816901408450704"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <namedColor name="brandPurple">
+            <color red="0.40000000000000002" green="0.21176470588235294" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellBackground">
+            <color red="0.96862745098039216" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color white="0.20392157137393951" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>

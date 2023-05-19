@@ -9,6 +9,7 @@ target 'Bingeer' do
     pod 'Alamofire'
     pod 'Kingfisher'
     pod 'YoutubePlayerView'
+    pod "BouncyLayout"
 
 end
 
