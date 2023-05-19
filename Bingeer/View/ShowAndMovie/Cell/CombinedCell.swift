@@ -51,21 +51,4 @@ class CombinedCell: UICollectionViewCell {
         
     }
 
-
-
-    
-//    func setDetails(show: Show) {
-//
-//        coverImageView.kf.setImage(with: URL(string: K.coverURL + (show.poster_path ?? "")), placeholder: UIImage(named: "bingeer-icon"))
-//        if let averageVote = show.vote_average {
-//            averageVoteButton.setTitle("\(String(format: "%.1f", averageVote))", for: .normal)
-//
-//        }
-//        nameLabel.text = show.name
-//        addToBingeerListButton.setTitle("", for: .normal)
-//        coverImageView.layer.cornerRadius = 10
-//        coverImageView.clipsToBounds = true
-//
-//    }
-
 }
