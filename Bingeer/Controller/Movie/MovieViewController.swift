@@ -99,6 +99,8 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func setup() {
         
+        let layout = BouncyLayout()
+        movieCollectionView.setCollectionViewLayout(layout, animated: false)
         movieCollectionView.dataSource = self
         movieCollectionView.delegate = self
         movieCollectionView.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
@@ -119,6 +121,7 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 return inCinemaMoviesArray.count
             
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
