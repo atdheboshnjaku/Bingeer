@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
         fetchWeeklyTrendingTVShows()
         fetchWeeklyTrendingMovies()
         topTrendingShowPosterImage.addoverlay()
+        topTrendingMoviePosterImage.addoverlay()
         
     }
     
@@ -105,58 +106,13 @@ class HomeViewController: UIViewController {
         }
         
     }
-    
-//    func fetchPersonDetails() {
-//
-//        dataManager.fetchData(for: "/person/500", forNestedEndpointKey: "") { (data: [Person], error) in
-//            if let error = error {
-//                print("\(error.localizedDescription)\n\(error)")
-//                return
-//            }
-//
-//            self.personArray = data
-//
-//        }
-//
-//    }
-//
-//    func fetchPerson() {
-//
-//        dataManager.fetchData(for: "/person/224513/combined_credits", forNestedEndpointKey: "cast") { (data: [Person], error) in
-//
-//            if let error = error {
-//                print("\(error.localizedDescription)\n\(error)")
-//                return
-//            }
-//
-//            let sortedData = self.sortByReleaseDate(data)
-//            self.personArray = sortedData
-//
-//        }
-//
-//    }
-//
-//    func sortByReleaseDate<T: ComparableDate>(_ array: [T]) -> [T] {
-//
-//        let itemsWithDate = array.filter { $0.releaseDate != nil }
-//        let itemsWithoutDate = array.filter { $0.releaseDate == nil }
-//
-//        let sortedWithDate = itemsWithDate.sorted { $0.releaseDate! > $1.releaseDate! }
-//
-//        return itemsWithoutDate + sortedWithDate
-//
-//    }
-    
-    
 
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
  
     func setup() {
-        
-//        let layout = BouncyLayout()
-//        topTrendingTvShowsCollection.setCollectionViewLayout(layout, animated: false)
+
         topTrendingTvShowsCollection.dataSource = self
         topTrendingTvShowsCollection.delegate = self
         topTrendingTvShowsCollection.register(UINib(nibName: "CombinedCell", bundle: nil), forCellWithReuseIdentifier: "CombinedCell")
@@ -219,17 +175,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        if collectionView == personCollectionView {
-//            let width = (collectionView.frame.width - 20) / 2
-//            return CGSize(width: width, height: 220)
-//        } else {
-//            return CGSize(width: 150, height: 220)
-//        }
-//
-//    }
     
 }
 
