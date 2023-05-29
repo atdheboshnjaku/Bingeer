@@ -38,13 +38,22 @@ class MovieCell: UICollectionViewCell {
             
             releaseDateLabel.text = formattedDate
             
+            let currentDate = Date()
+            
+            if let releaseDate = date, releaseDate > currentDate {
+                // Movie has not been released yet
+                addToBingeerListButton.isHidden = false
+            } else {
+                // Movie has been released
+                addToBingeerListButton.isHidden = true
+            }
+            
         }
-        //releaseDateLabel.text = movie.release_date
+         
         if let averageVote = movie.vote_average {
             
             if averageVote == 0.0 {
                 averageVoteButton.isHidden = true
-                //averageVoteButton.setTitle("", for: .normal)
             } else {
                 averageVoteButton.setTitle(" \(String(format: "%.1f", averageVote))", for: .normal)
             }
