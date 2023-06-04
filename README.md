@@ -2,6 +2,7 @@
 
 [![iOS](https://img.shields.io/badge/Platform-iOS%2014%2B-green)](https://apple.com) [![dependencies](https://img.shields.io/badge/Dependencies-Alamofire-red)](https://cocoapods.org/pods/Alamofire) [![dependencies](https://img.shields.io/badge/Dependencies-Kingfisher-red)](https://cocoapods.org/pods/Kingfisher) [![dependencies](https://img.shields.io/badge/Dependencies-YoutubePlayerView-red)](https://cocoapods.org/pods/YoutubePlayerView) 
     [![dependencies](https://img.shields.io/badge/Dependencies-BouncyLayout-red)](https://cocoapods.org/pods/BouncyLayout)  
+    [![dependencies](https://img.shields.io/badge/Dependencies-RealmSwift-red)](https://cocoapods.org/pods/RealmSwift)  
 
 # Bingeer
 
@@ -18,6 +19,8 @@ This app currently uses these dependencies:
 3. [YoutubePlayerView](https://cocoapods.org/pods/YoutubePlayerView)
 
 4. [BouncyLayout](https://cocoapods.org/pods/BouncyLayout)
+
+5. [RealmSwift](https://cocoapods.org/pods/RealmSwift)
 
 ## API Datasource
 
