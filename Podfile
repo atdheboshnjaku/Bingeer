@@ -10,6 +10,7 @@ target 'Bingeer' do
     pod 'Kingfisher'
     pod 'YoutubePlayerView'
     pod "BouncyLayout"
+    pod 'RealmSwift'
 
 end
 

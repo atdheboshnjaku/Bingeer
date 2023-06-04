@@ -2,12 +2,18 @@ PODS:
   - Alamofire (5.6.4)
   - BouncyLayout (2.3.0)
   - Kingfisher (7.6.2)
+  - Realm (10.39.0):
+    - Realm/Headers (= 10.39.0)
+  - Realm/Headers (10.39.0)
+  - RealmSwift (10.39.0):
+    - Realm (= 10.39.0)
   - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
   - Alamofire
   - BouncyLayout
   - Kingfisher
+  - RealmSwift
   - YoutubePlayerView
 
 SPEC REPOS:
@@ -15,14 +21,18 @@ SPEC REPOS:
     - Alamofire
     - BouncyLayout
     - Kingfisher
+    - Realm
+    - RealmSwift
     - YoutubePlayerView
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   BouncyLayout: 946047ef4987959bc107731c665ca4fdcdef5e17
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  Realm: c1334b2243da676ce77c28d4f21a67c8d561a9f9
+  RealmSwift: 618cb32040ce8de250ae6c509218ee0ead17dcf6
   YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: 6f8b5a8b167f280c1398d4fdad954758c06dd6e0
+PODFILE CHECKSUM: 0ac6d79180c7d018a68a6133f2a1416bf7f16777
 
 COCOAPODS: 1.12.0
