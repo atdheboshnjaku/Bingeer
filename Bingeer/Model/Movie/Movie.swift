@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Movie: Codable {
     
@@ -16,5 +17,13 @@ struct Movie: Codable {
     var vote_average: Double?
     var poster_path: String?
     var backdrop_path: String?
+    
+}
+
+class MovieNotificationObject: Object {
+    
+    @Persisted(primaryKey: true) var id: Int
+    @Persisted var title: String
+    @Persisted var release_date: String
     
 }

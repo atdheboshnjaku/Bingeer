@@ -60,7 +60,6 @@ class HomeViewController: UIViewController {
             }
 
             self.weeklyTrendingTVShows = data
-            //dump(self.weeklyTrendingTVShows)
             self.setTopTrendingShowDetails()
             self.topTrendingTvShowsCollection.reloadData()
 
@@ -77,7 +76,6 @@ class HomeViewController: UIViewController {
             }
             
             self.weeklyTrendingMovies = data
-            dump(self.weeklyTrendingMovies)
             self.setTopTrendingShowDetails()
             self.topTrendingMoviesCollection.reloadData()
             

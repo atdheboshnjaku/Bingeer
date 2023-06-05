@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol MovieNotificationDelegate {
+    func addToBingeerList(movie: Movie)
+}
 
 class MovieCell: UICollectionViewCell {
     
@@ -16,6 +21,10 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak var averageVoteButton: UIButton!
     @IBOutlet weak var addToBingeerListButton: UIButton!
     
+    var delegate: MovieNotificationDelegate?
+    var movie: Movie?
+    let realm = try! Realm()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +32,7 @@ class MovieCell: UICollectionViewCell {
     
     func setDetails(movie: Movie) {
         
+        self.movie = movie
         coverImageView.kf.setImage(with: URL(string: K.coverURL + (movie.poster_path ?? "")), placeholder: UIImage(named: "bingeer-icon"))
         nameLabel.text = movie.title
         
@@ -62,9 +72,27 @@ class MovieCell: UICollectionViewCell {
         
         movieOverview.text = movie.overview
         addToBingeerListButton.setTitle("", for: .normal)
+        
+        let mov = realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movie.id)
+        if (mov != nil) {
+            addToBingeerListButton.setImage(UIImage(systemName: "plus.app.fill"), for: .normal)
+        } else {
+            addToBingeerListButton.setImage(UIImage(systemName: "plus.app"), for: .normal)
+        }
+        
         coverImageView.layer.cornerRadius = 10
         coverImageView.clipsToBounds = true
         
     }
+    
+    
+    @IBAction func addToBingeerListPressed(_ sender: UIButton) {
+        
+        if let movie = movie {
+            delegate?.addToBingeerList(movie: movie)
+        }
+        
+    }
+    
 
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import BouncyLayout
+import RealmSwift
 
 class MovieViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
     var dataManager = DataManager()
+    let realm = try! Realm()
     
     var inCinemaMoviesArray: [Movie] = []
     var upcomingMoviesArray: [Movie] = []
@@ -148,6 +150,7 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
             
         }
         
+        cell.delegate = self
         return cell
         
     }
@@ -164,5 +167,37 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return 20
     }
     
+}
+
+extension MovieViewController: MovieNotificationDelegate {
+    
+    func addToBingeerList(movie: Movie) {
+        
+        let movieObject = MovieNotificationObject()
+        movieObject.id = movie.id
+        movieObject.title = movie.title
+        movieObject.release_date = movie.release_date ?? ""
+        
+        let movieListed = realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movie.id)
+        
+        if (movieListed != nil) {
+            try! realm.write {
+                realm.delete(realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movieListed?.id)!)
+                print("\(movie.title) in has been removed from bingeer list!")
+            }
+            
+        } else {
+            
+            try! realm.write {
+                
+                realm.add(movieObject)
+                
+            }
+            
+        }
+        
+        movieCollectionView.reloadData()
+        
+    }
     
 }
