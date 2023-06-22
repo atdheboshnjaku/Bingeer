@@ -9,13 +9,49 @@ import UIKit
 import CoreData
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let userNotification = UNUserNotificationCenter.current()
+        userNotification.delegate = self
+        
+        userNotification.requestAuthorization(options: [.alert, .badge, .sound]) { status, error in
+            
+            if status {
+                print("Push notification granted")
+            }
+            
+        }
+        
         return true
+        
+    }
+    
+    // MARK: - UNUserNotificationCenterDelegate
+
+    // Handle foreground notification presentation
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        // Customize the presentation options as desired
+        let presentationOptions: UNNotificationPresentationOptions = [.banner, .sound]
+        
+        completionHandler(presentationOptions)
+        
+    }
+
+    // Handle foreground and background notification handling
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // Perform any necessary actions based on the notification response
+        // This method is called when the user taps on a notification
+        if let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController {
+            if let movieViewController = tabBarController.viewControllers?.compactMap({ $0 as? MovieViewController }).first {
+                movieViewController.notificationCount = 0
+            }
+        }
+        
+        completionHandler()
     }
 
     // MARK: UISceneSession Lifecycle

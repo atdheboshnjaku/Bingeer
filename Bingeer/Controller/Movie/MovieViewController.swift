@@ -8,6 +8,7 @@
 import UIKit
 import BouncyLayout
 import RealmSwift
+import UserNotifications
 
 class MovieViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class MovieViewController: UIViewController {
     
     var dataManager = DataManager()
     let realm = try! Realm()
+    
+    var notificationCount: Int = 0
     
     var inCinemaMoviesArray: [Movie] = []
     var upcomingMoviesArray: [Movie] = []
@@ -32,7 +35,7 @@ class MovieViewController: UIViewController {
         setupDesign()
         setup()
         fetchMovies()
-        
+        triggerUpcomingMovieNotification()
     }
     
     func setupDesign() {
@@ -178,25 +181,62 @@ extension MovieViewController: MovieNotificationDelegate {
         movieObject.title = movie.title
         movieObject.release_date = movie.release_date ?? ""
         
-        let movieListed = realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movie.id)
-        
-        if (movieListed != nil) {
-            try! realm.write {
-                realm.delete(realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movieListed?.id)!)
-                print("\(movie.title) in has been removed from bingeer list!")
-            }
+        if let movieListed = realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movie.id) {
             
+            try! realm.write {
+                
+                print("\(movieListed.title) has been removed from bingeer list!, scheduled for \(movieListed.release_date)")
+                realm.delete(realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movieListed.id)!)
+                
+            }
+        
         } else {
             
             try! realm.write {
                 
                 realm.add(movieObject)
+                let movieAdded = realm.object(ofType: MovieNotificationObject.self, forPrimaryKey: movieObject.id)
+                print("Added \(movieObject.title) to realm")
+                print("this movie: \(movieAdded?.title) is in realm object!")
                 
             }
             
         }
         
         movieCollectionView.reloadData()
+        
+    }
+    
+    func triggerUpcomingMovieNotification() {
+        
+        let movieObject = realm.objects(MovieNotificationObject.self)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        for movieNotification in movieObject {
+            
+            guard let releaseDate = dateFormatter.date(from: movieNotification.release_date) else {
+                continue
+            }
+              
+            let notifyOneDayBeforeRelease = Calendar.current.date(byAdding: .day, value: -1, to: releaseDate)!
+            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: notifyOneDayBeforeRelease)
+            
+            notificationCount += 1
+            
+            let content = UNMutableNotificationContent()
+            content.title = "New movie gets released tomorrow!"
+            content.body = "\(movieNotification.title) is scheduled to release tomorrow, \(movieNotification.release_date)"
+            content.badge = NSNumber(value: notificationCount)
+            content.sound = .default
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let request = UNNotificationRequest(identifier: "\(movieNotification.id)", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request)
+            
+        }
         
     }
     
